@@ -15,11 +15,13 @@ spec:
         app: simple-node-k8s
     spec:
       containers:
-      - name: simple-node-travis
+      - name: simple-node-k8s
         image: felipefmb/simple_node_travis
         ports:
-        - containerPort: 80
+        - containerPort: 8080
         livenessProbe:
           httpGet:
             path: /health
             port: 8080
+          initialDelaySeconds: 3
+          periodSeconds: 3
