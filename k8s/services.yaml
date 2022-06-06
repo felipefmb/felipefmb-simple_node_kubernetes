@@ -3,7 +3,7 @@ kind: Service
 metadata:
   labels:
     app: simple-node-k8s
-  name: simple-node-k8s
+  name: simple-node-k8s-svc
   namespace: default
   selfLink: /api/v1/namespaces/default/services/simple-node-k8s
 spec:
