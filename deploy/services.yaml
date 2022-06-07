@@ -2,17 +2,17 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: simple-node-k8s
-  name: simple-node-k8s-svc
+    app: my-app-2
+  name: my-app-2-svc
   namespace: default
-  selfLink: /api/v1/namespaces/default/services/simple-node-k8s
+  selfLink: /api/v1/namespaces/default/services/my-app-2-svc
 spec:
   ports:
   - port: 8080
     protocol: TCP
     targetPort: 8080
   selector:
-    app: simple-node-k8s
+    app: my-app-2
   sessionAffinity: None
   type: ClusterIP
 status:
